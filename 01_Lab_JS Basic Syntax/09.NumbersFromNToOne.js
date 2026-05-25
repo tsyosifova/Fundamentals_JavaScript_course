@@ -9,4 +9,3 @@ function numbersFromNToOne (num){
     }
  
 numbersFromNToOne(5);
-//numbersFromNToOne(3);
