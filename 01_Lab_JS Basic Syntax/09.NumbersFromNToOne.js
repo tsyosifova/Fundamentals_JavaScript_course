@@ -1,0 +1,12 @@
+function numbersFromNToOne (num){
+
+    while (num >= 1) {
+        
+        console.log(num);
+        num--;
+
+        }
+    }
+ 
+numbersFromNToOne(5);
+//numbersFromNToOne(3);
