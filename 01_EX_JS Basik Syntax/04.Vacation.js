@@ -1,6 +1,6 @@
 function vacation(people, type, day){
 let price = 0;
-let sum = 0;
+let total = 0;
 if (type === `Students`) {
     if (day === `Friday`) {
         price = 8.45;
