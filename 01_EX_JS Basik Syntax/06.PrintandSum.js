@@ -1,9 +1,13 @@
 function printAndSum(startNum, endNum){
     let sum = 0;
+    let numbers = '';
+
     for(i=startNum; i<=endNum; i++){
-        console.log(i);
+        numbers += `${i} `;
         sum += i;
     }
+    
+    console.log(numbers);
     console.log(`Sum: ${sum}`);
 }
 
