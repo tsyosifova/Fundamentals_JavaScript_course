@@ -1,12 +1,12 @@
-function addAndSubtract(arr){
+function addAndSubtract(arr) {
     let newArr = [];
     let elArrSum = 0;
     let elNewArrSum = 0;
 
-    for (let i = 0; i < arr.length; i++){
+    for (let i = 0; i < arr.length; i++) {
         let curel = Number(arr[i]);
         let newEl = 0;
-        if(curel % 2 === 0) {
+        if (curel % 2 === 0) {
             newEl = curel + i;
         } else {
             newEl = curel - i;
