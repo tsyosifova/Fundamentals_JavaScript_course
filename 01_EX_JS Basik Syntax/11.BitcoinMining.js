@@ -1,5 +1,5 @@
 function bitcoinMining (input) {
-    let priceBitcoin = 11949;
+    let priceBitcoin = 11949.16;
     let priceOneGold = 67.51;
     let totalBitcoins = 0;
     let firstDayBitcoin = 0;
@@ -41,6 +41,6 @@ function bitcoinMining (input) {
 
 }
 
-//bitcoinMining ([100, 200, 300]);
+bitcoinMining ([100, 200, 300]);
 //bitcoinMining ([50, 100]);
-bitcoinMining ([3124.15, 504.212, 2511.124]);
+//bitcoinMining ([3124.15, 504.212, 2511.124]);
