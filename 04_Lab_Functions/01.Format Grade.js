@@ -23,4 +23,4 @@ function formatGrade (grade) {
 
 }
 
-formatGrade(2.99);
+formatGrade(5.50);
