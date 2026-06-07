@@ -1,20 +1,27 @@
 function loadingBar(num) {
-    let arrBar = [];
+    let printBar = createArrBar(num);
 
-    //firstEl = `%`;
-    //countFirstEl = num / 10;
-
-    for (let i = 0; i < num /10; i++) {
-        arrBar.push(`%`)
+    if (num > 0 && num < 100) {
+        console.log(`${num}% [${printBar}]`);
+        console.log(`Still loading...`)
+    } else if (num === 100) {
+        console.log(`${num}% Complete!`);
     }
 
-    //console.log(arrBar);
 
-    for (let i = 0; i < 10 - (num / 10); i++) {
-        arrBar.push(`.`);
+    function createArrBar(num) {
+        let arrBar = [];
+
+        for (let i = 0; i < num / 10; i++) {
+            arrBar.push(`%`)
+        }
+
+        for (let i = 0; i < 10 - (num / 10); i++) {
+            arrBar.push(`.`);
+        }
+
+        return arrBar.join('');
     }
-
-    console.log(arrBar.join(''));
 
 }
 
