@@ -6,6 +6,7 @@ function loadingBar(num) {
         console.log(`Still loading...`)
     } else if (num === 100) {
         console.log(`${num}% Complete!`);
+        console.log(`[${printBar}]`);
     }
 
 
@@ -22,9 +23,9 @@ function loadingBar(num) {
 
         return arrBar.join('');
     }
-
+    
 }
 
-loadingBar(30);
+loadingBar(100);
 //30% [%%%.......]
 //Still loading...
