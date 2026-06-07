@@ -10,13 +10,13 @@ function perfectNumber(num) {
     function sumDivisors(num) {
         let sum = 0;
 
-        for (let divisor = 1; divisor = num - 1; divisor++) {
-            if (divisor % 2 === 0) {
+        for (let divisor = 1; divisor <= num - 1; divisor++) {
+            if (num % divisor === 0) {
                 sum += divisor;
             }
         }
+        return sum;
     }
-
 }
 
 perfectNumber(6);
