@@ -1,0 +1,13 @@
+function integerandFloat(num1, num2, num3) {
+    let sum = num1 + num2 + num3;
+
+    if (sum % 2 === 0) {
+        console.log(`${sum} - Integer`);
+    } else {
+        console.log(`${sum} - Float`);
+    }
+
+}
+
+integerandFloat(9, 100, 1.1);
+integerandFloat(100, 200, 303);
