@@ -2,8 +2,8 @@ function findIsPalindrom(arr) {
 
     for (let num of arr) {
 
-        let result = numIsPalindrom(num);
-        console.log(result);
+        let isPalindrom = numIsPalindrom(num);
+        console.log(isPalindrom);
 
     }
 
@@ -11,9 +11,7 @@ function findIsPalindrom(arr) {
         let numAsStr = String(num);
         let revurseNumAsStr = numAsStr.split('').reverse().join('');
 
-        let isPalindrom = numAsStr === revurseNumAsStr;
-
-        return isPalindrom;
+        return numAsStr === revurseNumAsStr;
 
     }
 
