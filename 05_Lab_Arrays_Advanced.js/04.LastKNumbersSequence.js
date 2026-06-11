@@ -2,9 +2,6 @@ function lastKNumbersSequence(n, k) {
 
     let result = [1];
 
-
-    //console.log(result);
-
     for(let i = 1; i < n; i++) {
             let startEl = Math.max(0,i - k);
 
