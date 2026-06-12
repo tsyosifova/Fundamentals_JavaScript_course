@@ -7,3 +7,5 @@ function processOddNumbers(arr) {
 
     console.log(result.join(' '));
 }
+
+processOddNumbers([10, 15, 20, 25]);
