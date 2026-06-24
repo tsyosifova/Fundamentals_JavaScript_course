@@ -3,10 +3,11 @@ function solve (city) {
     let keys = Object.keys(city);
 
     for (let key of keys) {
-
+        //console.log(key);
         let value = city[key];
+        console.log(value);
 
-        console.log(`${key} -> ${value}`);
+        //console.log(`${key} -> ${value}`);
 
     }
 
