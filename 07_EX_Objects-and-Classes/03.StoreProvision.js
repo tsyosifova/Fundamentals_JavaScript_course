@@ -1,7 +1,6 @@
 function storeProvision(currProductsArr, orderedProductsArr) {
-    let allProductArr = [];
-    let product = '';
-    let quntity = 0;
+    let productObg = {};
+
     for (let i = 0; i < currProductsArr.length; i += 2) {
         product = currProductsArr[i];
         quntity = Number(currProductsArr[i + 1]);
@@ -13,23 +12,30 @@ function storeProvision(currProductsArr, orderedProductsArr) {
             orderedProductsArr.splice(indPr, 2);
 
             for (let j = 0; j < orderedProductsArr.length; j += 2) {
-                productOrd 
+                let productOrd = orderedProductsArr[j];
             }
-
-            //console.log(orderedProductsArr);
         }
 
-        let productObg = {
+        productObg = {
             prod: product,
             qunt: quntity
         };
 
         console.log(`${productObg.prod} -> ${productObg.qunt}`);
 
-        //console.log(currProductsArr[i]);
-        //console.log(quntity);
     }
 
+    for (let i = 0; i < orderedProductsArr.length; i += 2) {
+        let product = orderedProductsArr[i];
+        let quntity = orderedProductsArr[i + 1];
+
+        productObg = {
+            prod: product,
+            qunt: quntity
+        };
+
+        console.log(`${productObg.prod} -> ${productObg.qunt}`);
+    }
 }
 
 storeProvision([
@@ -37,4 +43,11 @@ storeProvision([
 ],
     [
         'Flour', '44', 'Oil', '12', 'Pasta', '7', 'Tomatoes', '70', 'Bananas', '30'
+    ]);
+
+storeProvision([
+    'Salt', '2', 'Fanta', '4', 'Apple', '14', 'Water', '4', 'Juice', '5'
+],
+    [
+        'Sugar', '44', 'Oil', '12', 'Apple', '7', 'Tomatoes', '7', 'Bananas', '30'
     ]);
