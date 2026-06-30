@@ -1,25 +1,21 @@
 function makeDictionary(arr) {
     let dictionary = {};
     let dictionaryObj = {};
-    let term = '';
-    let definition = '';
 
     for (let dictionaryObjJSON of arr) {
         dictionaryObj = JSON.parse(dictionaryObjJSON);
 
-        let entries = Object.entries(dictionaryObj);
-
-        for (let entry of entries) {
-            [term, definition] = entry;
-        }
+        let [term, definition] = Object.entries(dictionaryObj)[0];
 
         dictionary[term] = definition;
     }
 
-    
+    let sorted = Object.entries(dictionary).sort((a, b) => a[0].localeCompare(b[0]));
 
-    console.log(dictionary);
+    for (let [term, definition] of sorted) {
 
+        console.log(`Term: ${term} => Definition: ${definition}`);
+    }
 }
 
 makeDictionary([
