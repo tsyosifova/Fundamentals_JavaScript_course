@@ -1,5 +1,5 @@
 function catalogue(arr) {
-console.log('Предстои решение!')м;
+console.log('Предстои решение!');
 }
 
 catalogue([
