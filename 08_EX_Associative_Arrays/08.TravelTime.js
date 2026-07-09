@@ -1,27 +1,35 @@
 function solve(DataArr) {
-    let countryTowerObj = {};
-    let townCostObj = {};
+    let countryTownObj = {};
     for (let travelStr of DataArr) {
         //console.log(travelStr);
         let [country, town, cost] = travelStr.split(' > ');
         cost = Number(cost);
 
-        if (town in townCostObj) {
-            if (cost > townCostObj[town]) {
-                townCostObj[town] = cost;
+        if (country in countryTownObj) {
+            if (town in countryTownObj[country]) {
+                if (cost < countryTownObj[country][town]) {
+                    countryTownObj[country][town] = cost;
+                }
+            } else {
+                countryTownObj[country][town] = cost;
             }
         } else {
-            townCostObj[town] = cost;
+            countryTownObj[country] = { [town]: cost };
         }
 
-        let entries = Object.entries(townCostObj).sort((a, b) => a[1] - b[1]);
 
-       // console.log([country, town, cost]);
-      //  console.log(townCostObj);  
-            
     }
 
-    
+    console.log(countryTownObj);
+
+   let sortedCounrys = Object.entries(countryTownObj).sort((a, b) => a[0].localeCompare(b[0]));
+
+    console.log(sortedCounrys);
+    // for (let [country, Тук как да деструктурирам на town, cost] of entries) {
+       
+       
+    //     console.log(`${country} -> ${town} -> ${cost}`);
+    //}
 }
 
 solve([
