@@ -20,17 +20,28 @@ function solve(DataArr) {
 
     }
 
-    console.log(countryTownObj);
+    //console.log(countryTownObj);
 
-   let sortedCounrys = Object.entries(countryTownObj).sort((a, b) => a[0].localeCompare(b[0]));
+    let sortedCounrys = Object.entries(countryTownObj).sort((a, b) => a[0].localeCompare(b[0]));
 
-    console.log(sortedCounrys);
-    // for (let [country, Тук как да деструктурирам на town, cost] of entries) {
-       
-       
-    //     console.log(`${country} -> ${town} -> ${cost}`);
-    //}
+    //console.log(sortedCounrys);
+
+    for (let [country, townCostObj] of sortedCounrys) {
+        let sortedTown = Object.entries(townCostObj).sort((a, b) => a[1] - b[1]);
+
+        let result = [];
+
+        for (let [town, cost] of sortedTown) {
+            result.push(`${town} -> ${cost}`);
+            //console.log(result);
+        }
+
+        console.log(`${country} -> ${result.join(' ')}`);
+    }
+
 }
+
+
 
 solve([
     "Bulgaria > Sofia > 500",
@@ -38,4 +49,4 @@ solve([
     "France > Paris > 2000",
     "Albania > Tirana > 1000",
     "Bulgaria > Sofia > 200"
-])
+]);
