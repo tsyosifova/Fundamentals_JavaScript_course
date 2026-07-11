@@ -5,8 +5,8 @@ function solve(filePath) {
     let faleName = file.substring(0, dotInd);
     let fleExtension = file.substring(dotInd + 1);
 
-    console.log(faleName);
-    console.log(fleExtension);
+    console.log(`File name: ${faleName}`);
+    console.log(`File extension: ${fleExtension}`);
     
 }
 
