@@ -1,7 +1,8 @@
 function solve(DataArr) {
     let countryTownObj = {};
+    
     for (let travelStr of DataArr) {
-        //console.log(travelStr);
+        
         let [country, town, cost] = travelStr.split(' > ');
         cost = Number(cost);
 
@@ -20,11 +21,7 @@ function solve(DataArr) {
 
     }
 
-    //console.log(countryTownObj);
-
     let sortedCounrys = Object.entries(countryTownObj).sort((a, b) => a[0].localeCompare(b[0]));
-
-    //console.log(sortedCounrys);
 
     for (let [country, townCostObj] of sortedCounrys) {
         let sortedTown = Object.entries(townCostObj).sort((a, b) => a[1] - b[1]);
@@ -32,8 +29,8 @@ function solve(DataArr) {
         let result = [];
 
         for (let [town, cost] of sortedTown) {
+
             result.push(`${town} -> ${cost}`);
-            //console.log(result);
         }
 
         console.log(`${country} -> ${result.join(' ')}`);
