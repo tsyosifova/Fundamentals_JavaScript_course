@@ -41,11 +41,12 @@ function solve(string) {
             }
         }
 
-        demonsHealthDamage[demon] = {health, damage};
+        demonsHealthDamage[demon] = { health, damage };
 
     }
    
     let entries = Object.entries(demonsHealthDamage);
+    //.sort((a, b) => a[0].localeCompare(b[0]));
 
     for (let [name, infoObj] of entries) {
 
@@ -54,4 +55,8 @@ function solve(string) {
     
 }
 
-solve('M3ph1st0**, Azazel')
+solve('M3ph1st0**, Azazel');
+
+solve(`M3ph-0.5s-0.5t0.0**`);
+
+solve(`Gos/ho`);
